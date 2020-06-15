@@ -6,8 +6,8 @@ const projectsRouter = require('./projects/projectsRouter')
 const server = express()
 
 server.use(express.json())
-server.use(actionsRouter)
-server.use(projectsRouter)
+server.use('/actions', actionsRouter)
+server.use('/projects', projectsRouter)
 
 
 server.listen(PORT, () => {
